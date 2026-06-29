@@ -203,8 +203,10 @@ const CanvasContainer = ({ paused = false, reduceMotion = false }: CanvasContain
               luminanceThreshold={0.2}
               luminanceSmoothing={0.8}
             />
-            {reduceMotion ? null : <Noise opacity={0.08} />}
-            {reduceMotion ? null : (
+            {reduceMotion ? <></> : <Noise opacity={0.08} />}
+            {reduceMotion ? (
+              <></>
+            ) : (
               <DistortionEffect
                 progressRef={scrollProgress}
                 sections={cameraWaypoints.length}

@@ -1,6 +1,6 @@
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Suspense } from "react";
-import { Environment, OrbitControls, Float, PerspectiveCamera } from "@react-three/drei";
+import { Environment, Float, PerspectiveCamera } from "@react-three/drei";
 import AbstractCharacter from "./AbstractCharacter";
 
 const Experience = () => {

@@ -774,18 +774,27 @@ html.reduce-motion {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 8px 12px;
-  border-radius: 12px;
-  background: rgba(8, 12, 10, 0.92);
-  border: 1px solid var(--stroke-soft);
-  font-size: 0.8rem;
+  padding: 8px 14px;
+  border-radius: 10px;
+  background: rgba(16, 24, 16, 0.65);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(233, 246, 198, 0.15);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.skill-pill:hover {
+  background: rgba(95, 130, 66, 0.18);
+  border-color: rgba(95, 130, 66, 0.45);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(95, 130, 66, 0.2);
 }
 
 .skill-level {
-  color: var(--accent-cyan);
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
+  display: none;
 }
 
 .projects-track {

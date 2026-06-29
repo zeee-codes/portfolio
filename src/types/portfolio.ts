@@ -82,7 +82,7 @@ export type Project = {
   highlights: string[];
   features: ProjectFeature[];
   stack: string[];
-  category: "health" | "ai" | "education" | "portfolio" | "automation";
+  category: "health" | "ai" | "education" | "portfolio" | "automation" | "ecommerce" | "systems";
   status: ProjectStatus;
   links: ProjectLink[];
   featured?: boolean;

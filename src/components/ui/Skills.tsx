@@ -8,8 +8,8 @@ const Skills = ({ categories }: SkillsProps) => {
   return (
     <section id="skills" className="section">
       <div className="section-head">
-        <p className="section-kicker">Skills</p>
-        <h2 className="section-title">Technical arsenal and execution craft.</h2>
+        <p className="section-kicker">Tech Stack</p>
+        <h2 className="section-title">Engineered stack & applied capabilities.</h2>
       </div>
       <div className="skill-grid">
         {categories.map((category, index) => (
@@ -29,7 +29,6 @@ const Skills = ({ categories }: SkillsProps) => {
               {category.skills.map((skill) => (
                 <span key={skill.name} className="skill-pill">
                   {skill.name}
-                  <span className="skill-level">{skill.level}</span>
                 </span>
               ))}
             </div>

@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
-import { Mesh, MeshStandardMaterial } from "three";
+import { Mesh } from "three";
 
 const AbstractCharacter = () => {
   const groupRef = useRef<any>();

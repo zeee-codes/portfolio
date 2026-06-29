@@ -131,267 +131,514 @@ export const portfolioData: PortfolioData = {
   ],
   projects: [
     {
-      id: "omnifit",
-      title: "OmniFit",
-      subtitle: "All-in-One Health and Fitness App",
+      id: "kokonam",
+      title: "KOKONAM",
+      subtitle: "Enterprise E-Commerce Ecosystem",
       description:
-        "Macro calculation, weight logging, and AI-powered form checking in a single health ecosystem.",
+        "Full-scale enterprise e-commerce platform with custom UI, role authentication, and live logistics integration.",
       longDescription:
-        "A unified fitness platform that combines macro tracking, weight logs, goal systems, and an AI exercise form checker. Includes a 98% accurate Indian food scanner for effortless diet logging.",
-      role: "Product + Full Stack",
-      timeline: "2024",
-      impact: "Unified fitness ecosystem with AI form checks and food scanning.",
+        "A full-scale, enterprise-level e-commerce ecosystem built in collaboration with Aryan. Features a custom user interface, role-based authentication, server-side security, and an integrated ShipRocket gateway for live logistics and tracking. Managed production deployment pipelines on Vercel with automated custom domain routing and pushed 3 major approved PRs to production.",
+      role: "Full Stack Architect",
+      timeline: "2026",
+      impact: "Enterprise e-commerce ecosystem with automated deployment and live logistics tracking.",
       results: [
-        "98% food scanner accuracy",
-        "AI form analysis with instant correction cues",
-        "Macro + diet planner in one flow",
+        "Full-scale enterprise e-commerce ecosystem",
+        "Integrated ShipRocket gateway for live logistics and tracking",
+        "Pushed 3 major approved PRs to production",
       ],
       highlights: [
-        "Macro calculation",
-        "AI form checker",
-        "98% food scanner accuracy",
+        "Next.js & Vercel",
+        "ShipRocket API",
+        "Custom Secure Gateways",
       ],
       features: [
         {
-          title: "Nutrition Engine",
+          title: "Custom UI & Role Auth",
           description:
-            "Macro calculator and diet planner tailored to personal goals.",
+            "Engineered responsive e-commerce UI with multi-layered role authentication and server security.",
         },
         {
-          title: "AI Form Analysis",
+          title: "ShipRocket Logistics",
           description:
-            "Computer vision posture checks with instant correction cues.",
+            "Integrated live tracking and logistics processing gateway directly into order workflows.",
         },
         {
-          title: "Food Scanner",
+          title: "Vercel Production CI/CD",
           description:
-            "Indian food recognition with 98% accuracy.",
-          metric: "98% accuracy",
+            "Automated custom domain routing and deployment pipelines with zero-downtime PR merges.",
         },
       ],
       stack: [
-        "React",
         "Next.js",
-        "Node.js",
-        "AI Computer Vision APIs",
-        "SQL",
+        "Vercel",
+        "ShipRocket API",
+        "Custom Secure Payment Gateways",
       ],
-      category: "health",
+      category: "ecommerce",
       status: "Live",
-      links: [
-        { label: "Case Study", url: "#", type: "docs" },
-        { label: "Preview", url: "#", type: "demo" },
-      ],
+      links: [{ label: "Live Site", url: "https://kokonam.in", type: "live" }],
       featured: true,
       accentColor: "#5f8242",
       gradient: ["#5f8242", "#1a2414"],
-      videoUrl: "/videos/omnifit.mp4",
-      year: 2024,
+      year: 2026,
+    },
+    {
+      id: "qwerty-nova",
+      title: "QWERTY NOVA",
+      subtitle: "Founder-Led Internal Systems Engine",
+      description:
+        "Comprehensive internal systems engine with custom relational database schemas and role-based access.",
+      longDescription:
+        "A founder-led internal systems engine. Designed and completed the entire comprehensive UI, successfully integrated the user authentication layer, and architected the foundational database schema using Supabase.",
+      role: "Lead Systems Engineer",
+      timeline: "2026",
+      impact: "Founder-led internal systems engine with automated workflow orchestration.",
+      results: [
+        "Designed and completed comprehensive UI from scratch",
+        "Integrated secure user authentication layer",
+        "Architected foundational Supabase database schema",
+      ],
+      highlights: [
+        "Next.js & Supabase",
+        "Relational DB Schema",
+        "Custom UI Layouts",
+      ],
+      features: [
+        {
+          title: "Comprehensive UI Systems",
+          description:
+            "Designed structural layouts and user interfaces from scratch.",
+        },
+        {
+          title: "Supabase Schema & Auth",
+          description:
+            "Architected foundational relational database schemas and secure user authentication.",
+        },
+      ],
+      stack: ["Next.js", "Supabase", "Relational DB Schema"],
+      category: "systems",
+      status: "In Development",
+      links: [{ label: "System Brief", url: "#", type: "docs" }],
+      featured: true,
+      accentColor: "#c34e52",
+      gradient: ["#c34e52", "#2a1112"],
+      year: 2026,
+    },
+    {
+      id: "genai-resume",
+      title: "GEN_AI RESUME PROCESSOR",
+      subtitle: "High-Performance Generative Builder",
+      description:
+        "Algorithmic profile contextualization engine driven by Gemini API with striking Brutalist design tokens.",
+      longDescription:
+        "First project built during the internship. Features an AI-driven generative text engine utilizing the Gemini API to build resumes, paired with a striking, high-contrast Brutalist interface with bold color constraints.",
+      role: "AI & Frontend Engineer",
+      timeline: "2026",
+      impact: "AI-driven resume engine with high-contrast Brutalist typography constraints.",
+      results: [
+        "Generative AI resume engine powered by Gemini API",
+        "Striking high-contrast Brutalist design interface",
+        "Algorithmic profile contextualization",
+      ],
+      highlights: [
+        "Gemini API Engine",
+        "Brutalist Design UI",
+        "Profile Contextualization",
+      ],
+      features: [
+        {
+          title: "Generative Text Engine",
+          description:
+            "Leverages Gemini API for algorithmic profile contextualization and resume generation.",
+        },
+        {
+          title: "Brutalist Design Tokens",
+          description:
+            "Striking high-contrast interface utilizing bold color constraints and rigid typography.",
+        },
+      ],
+      stack: ["Next.js", "Gemini API", "Brutalist UI Design Tokens"],
+      category: "ai",
+      status: "Live",
+      links: [{ label: "Preview App", url: "#", type: "demo" }],
+      featured: true,
+      accentColor: "#a2d094",
+      gradient: ["#a2d094", "#1b2414"],
+      year: 2026,
+    },
+    {
+      id: "clickpoint",
+      title: "ClickPoint (MHCIT Academy)",
+      subtitle: "Client-Facing Academy Platform",
+      description:
+        "Structured template-driven client platform engineered to meet strict institutional approval requirements.",
+      longDescription:
+        "A client-facing project for MHCIT Academy. Iterated closely through client feedback, successfully pivoting from an initial modern experimental UI concept to a structured, template-driven layout to secure strict client approval.",
+      role: "Frontend Lead",
+      timeline: "2026",
+      impact: "Template-driven client platform delivering 100% client satisfaction and approval.",
+      results: [
+        "Iterated closely through iterative client feedback cycles",
+        "Pivoted from experimental UI to structured template layout",
+        "Secured strict institutional client approval",
+      ],
+      highlights: [
+        "Client-Centric Pivot",
+        "Template Architecture",
+        "Production Delivery",
+      ],
+      features: [
+        {
+          title: "Iterative Client Adaptation",
+          description:
+            "Pivoted mid-lifecycle based on strict client feedback cycles.",
+        },
+        {
+          title: "Structured Layout Engine",
+          description:
+            "Delivered template-driven design system securing full institutional sign-off.",
+        },
+      ],
+      stack: ["Next.js", "Template Systems", "Client UI Framework"],
+      category: "education",
+      status: "Shipped",
+      links: [{ label: "Client Platform", url: "#", type: "live" }],
+      featured: false,
+      accentColor: "#e9f6c6",
+      gradient: ["#e9f6c6", "#1b2014"],
+      year: 2026,
+    },
+    {
+      id: "ai-lead-processor",
+      title: "AI Audit & Lead Gen Processor",
+      subtitle: "Algorithmic B2B Pipeline Automation",
+      description:
+        "Automated system running algorithmic site auditing and targeted B2B lead generation processing pipelines.",
+      longDescription:
+        "An automated system designed and deployed to run algorithmic site auditing and targeted B2B lead generation processing pipelines in production environments.",
+      role: "Automation Architect",
+      timeline: "2026",
+      impact: "Automated B2B pipeline processing site audits and lead gen.",
+      results: [
+        "Deployed automated algorithmic site auditing",
+        "Targeted B2B lead generation processing pipelines",
+        "Production automated workflow orchestration",
+      ],
+      highlights: [
+        "Automated Site Auditing",
+        "Targeted Lead Gen",
+        "AI Processing Pipelines",
+      ],
+      features: [
+        {
+          title: "Algorithmic Site Auditing",
+          description:
+            "Automated analysis of web properties for optimization and data extraction.",
+        },
+        {
+          title: "Lead Generation Pipeline",
+          description:
+            "Processes and qualifies targeted B2B leads automatically.",
+        },
+      ],
+      stack: ["Next.js", "AI Pipelines", "Automation Engine"],
+      category: "automation",
+      status: "Live",
+      links: [{ label: "System Documentation", url: "#", type: "docs" }],
+      featured: false,
+      accentColor: "#5f8242",
+      gradient: ["#5f8242", "#0f140a"],
+      year: 2026,
     },
     {
       id: "syncell",
       title: "Syncell",
-      subtitle: "Visually Appealing Health Timeline",
+      subtitle: "Personal Medical Timeline OS",
       description:
-        "Chronological health data with secure real-time syncing for doctors, labs, and patients.",
+        "Chronological health record timeline connecting doctors, labs, and patients with encrypted real-time sync.",
       longDescription:
-        "A secure, visually rich timeline for health records that syncs across patients, doctors, and labs in real time. Built to remove paperwork, accelerate care, and keep data encrypted end-to-end.",
+        "A Personal Medical Timeline Operating System designed as a chronological, real-time health record timeline. It securely connects doctors, labs, and patients using role-based encryption to automate healthcare data with zero paperwork.",
       role: "System Design + Frontend",
       timeline: "2024",
-      impact: "Real-time health timeline for doctors, labs, and patients.",
+      impact: "Real-time encrypted medical timeline connecting providers and patients.",
       results: [
-        "Real-time sync between providers",
-        "Encrypted records with role-based access",
-        "Paperwork-free collaboration flow",
+        "Real-time sync between doctors, labs, and patients",
+        "Encrypted records with role-based access control",
+        "Paperwork-free collaborative healthcare flow",
       ],
       highlights: [
-        "Real-time sync",
-        "Encrypted records",
-        "Zero paperwork",
+        "Real-Time Sync",
+        "Encrypted Records",
+        "Zero Paperwork",
       ],
       features: [
         {
-          title: "Unified Timeline",
+          title: "Unified Medical Timeline",
           description:
-            "Chronological health history with instant context for providers.",
+            "Chronological health history providing instant context for healthcare providers.",
         },
         {
-          title: "Live Collaboration",
+          title: "Live Provider Collaboration",
           description:
-            "Real-time updates between doctors, labs, and patients.",
+            "Real-time updates between doctors, labs, and patients via WebSockets.",
         },
         {
-          title: "Secure Storage",
+          title: "Encrypted Data Layer",
           description:
-            "Encrypted data layer with access control by role.",
+            "Role-based access control ensuring total privacy and security.",
         },
       ],
-      stack: [
-        "Next.js",
-        "Node.js",
-        "Real-time WebSockets",
-        "Encrypted Database",
-        "Tailwind",
-      ],
+      stack: ["Next.js", "Node.js", "WebSockets", "Encrypted DB", "Tailwind CSS"],
       category: "health",
       status: "In Development",
       links: [{ label: "Product Brief", url: "#", type: "docs" }],
       featured: true,
       accentColor: "#c34e52",
       gradient: ["#c34e52", "#2a1112"],
-      videoUrl: "/videos/syncell.mp4",
       year: 2024,
+    },
+    {
+      id: "omnifit",
+      title: "OmniFit",
+      subtitle: "All-in-One Health & Fitness Ecosystem",
+      description:
+        "Macro calculation, weight logging, and computer vision form analysis with 98% food scanner accuracy.",
+      longDescription:
+        "A unified health and fitness platform combining custom macro calculation, weight logging, and real-time AI physical form analysis. Includes a specialized scanner for Indian food items engineered with a 98% recognition accuracy rate.",
+      role: "Product + Full Stack",
+      timeline: "2024",
+      impact: "Unified fitness ecosystem with computer vision form checks and 98% food scanner accuracy.",
+      results: [
+        "98% Indian food recognition scanner accuracy",
+        "Computer vision posture analysis with instant cues",
+        "Unified macro and diet planner workflow",
+      ],
+      highlights: [
+        "Computer Vision AI",
+        "98% Scanner Accuracy",
+        "Macro Engine",
+      ],
+      features: [
+        {
+          title: "Nutrition Engine",
+          description:
+            "Custom macro calculator and diet planner tailored to individual goals.",
+        },
+        {
+          title: "AI Form Analysis",
+          description:
+            "Real-time physical posture checks providing instant correction cues.",
+        },
+        {
+          title: "Indian Food Scanner",
+          description:
+            "Specialized computer vision scanner with 98% recognition accuracy.",
+        },
+      ],
+      stack: [
+        "React",
+        "Next.js",
+        "Node.js",
+        "Computer Vision APIs",
+        "SQL",
+        "IONOS Hosting",
+      ],
+      category: "health",
+      status: "Live",
+      links: [{ label: "Live Platform", url: "https://beomnifit.website", type: "live" }],
+      featured: true,
+      accentColor: "#5f8242",
+      gradient: ["#5f8242", "#1a2414"],
+      year: 2024,
+    },
+    {
+      id: "portfolio-3d",
+      title: "Cinematic 3D Portfolio",
+      subtitle: "Developer Showroom & WebGL World",
+      description:
+        "Custom 3D showroom built on synchronized GSAP/Lenis master playhead with procedural shaders.",
+      longDescription:
+        "A premium, cinematic developer showroom built on a synchronized GSAP/Lenis master timeline playhead. Features a procedural, 3-layer 'Processor Monolith' that mathematically shatters and expands in 3D space based on real-time scroll position, custom GLSL post-processing shaders, and a simulated system BIOS boot sequence.",
+      role: "Creative Dev + 3D Architect",
+      timeline: "2026",
+      impact: "Scroll-driven WebGL experience with 60 FPS performance optimization.",
+      results: [
+        "Synchronized GSAP/Lenis master timeline playhead",
+        "Procedural 3-layer Processor Monolith 3D shattering",
+        "Performance-first GLSL postprocessing shaders",
+      ],
+      highlights: [
+        "R3F & Three.js",
+        "GSAP Master Timeline",
+        "Lenis Smooth Scroll",
+      ],
+      features: [
+        {
+          title: "Synchronized Scroll Playhead",
+          description:
+            "Camera paths and 3D object transformations linked to scroll offset.",
+        },
+        {
+          title: "Procedural 3D Monolith",
+          description:
+            "Mathematically shatters and expands layers dynamically in WebGL space.",
+        },
+      ],
+      stack: [
+        "React",
+        "TypeScript",
+        "Three.js",
+        "React Three Fiber",
+        "GSAP",
+        "Lenis",
+        "Tailwind CSS",
+      ],
+      category: "portfolio",
+      status: "Live",
+      links: [{ label: "Repository", url: "#", type: "github" }],
+      featured: false,
+      accentColor: "#a2d094",
+      gradient: ["#a2d094", "#1b2414"],
+      year: 2026,
     },
     {
       id: "cuda",
       title: "CUDA",
       subtitle: "Local-First LLM Desktop Automation Assistant",
       description:
-        "Private offline assistant that automates deep local tasks like file traversal and app control.",
+        "Offline Jarvis-style assistant executing 100% local inference for private file traversal and system control.",
       longDescription:
-        "A Jarvis-style local LLM that runs offline to manage files, launch applications, and execute system operations. Designed for privacy-first automation with powerful desktop integrations.",
-      role: "AI Automation",
+        "A local-first desktop automation assistant inspired by a Jarvis-style utility. It runs 100% offline inference locally to securely manage private file system traversal, application launching, and automated system actions without exposing private data online.",
+      role: "AI Automation Lead",
       timeline: "2023",
-      impact: "Local-first LLM assistant for private desktop automation.",
+      impact: "100% local offline LLM assistant for private desktop automation.",
       results: [
-        "100% local inference",
-        "Automated system actions",
-        "Private file traversal workflow",
+        "100% local offline inference for zero privacy exposure",
+        "Automated system workflows and app launching",
+        "Private local file system traversal engine",
       ],
-      highlights: ["Private by design", "Local automation", "Desktop control"],
+      highlights: [
+        "100% Offline LLM",
+        "Jarvis-Style Utility",
+        "Desktop System Control",
+      ],
       features: [
         {
-          title: "Offline LLM",
-          description: "All inference runs locally for complete privacy.",
-          metric: "100% local",
+          title: "Offline LLM Inference",
+          description:
+            "All AI model execution runs locally ensuring complete data privacy.",
         },
         {
-          title: "System Actions",
+          title: "System Workflow Automation",
           description:
-            "Automated workflows for launching apps and managing files.",
-        },
-        {
-          title: "Query Engine",
-          description:
-            "Runs local and web-based queries without exposing private data.",
+            "Launches applications, manipulates files, and automates desktop operations.",
         },
       ],
-      stack: [
-        "Python",
-        "Local LLMs",
-        "Electron/Desktop environment integrations",
-        "Node.js",
-      ],
+      stack: ["Python", "Local LLMs", "Electron", "Node.js"],
       category: "automation",
       status: "Prototype",
       links: [{ label: "Demo Video", url: "#", type: "video" }],
-      featured: true,
-      accentColor: "#a2d094",
-      gradient: ["#a2d094", "#1b2414"],
-      videoUrl: "/videos/cuda.mp4",
+      featured: false,
+      accentColor: "#e9f6c6",
+      gradient: ["#e9f6c6", "#1b2014"],
       year: 2023,
+    },
+    {
+      id: "iot-concert-hall",
+      title: "IoT Concert Hall Simulation",
+      subtitle: "Multi-Tiered Hardware-Software Architecture",
+      description:
+        "Architectural simulation for venue crowd management, automated stage hardware, and emergency safety.",
+      longDescription:
+        "A multi-tiered software-hardware architectural simulation for a modern concert hall venue. It incorporates complex automated subsystems for real-time crowd management, digital stage hardware controls, and automated emergency safety protocols.",
+      role: "Systems Architect",
+      timeline: "2025",
+      impact: "Hardware-software simulation for automated crowd safety and stage control.",
+      results: [
+        "Real-time crowd density management simulation",
+        "Digital stage hardware control protocols",
+        "Automated emergency safety subsystem triggers",
+      ],
+      highlights: [
+        "IoT Hardware Integration",
+        "Real-Time Crowd Management",
+        "Emergency Safety Subsystems",
+      ],
+      features: [
+        {
+          title: "Real-Time Crowd Management",
+          description:
+            "Simulates sensor networks for tracking density and automated crowd flow.",
+        },
+        {
+          title: "Stage Control Protocol",
+          description:
+            "Digital interface managing lighting, acoustics, and stage mechanics.",
+        },
+      ],
+      stack: ["IoT Systems Architecture", "Node.js", "Real-time Controls"],
+      category: "systems",
+      status: "Prototype",
+      links: [{ label: "Architecture Blueprint", url: "#", type: "docs" }],
+      featured: false,
+      accentColor: "#5f8242",
+      gradient: ["#5f8242", "#1a2414"],
+      year: 2025,
     },
     {
       id: "clg360",
       title: "Clg360",
       subtitle: "Integrated College Management Web Portal",
       description:
-        "Three-tier communication loop connecting students, teachers, and parents.",
+        "Three-tier communication loop connecting students, teachers, and parents with dedicated dashboards.",
       longDescription:
-        "A foundational college management portal that connects students, teachers, and parents in one system. Built with vanilla technologies to master core web fundamentals while enabling structured communication.",
-      role: "Full Stack (Vanilla)",
+        "A 3-tier integrated college management portal establishing structured, real-time communication loops and data tracking dashboards for students, teachers, and parents.",
+      role: "Full Stack Developer",
       timeline: "2022",
-      impact: "Unified college portal for students, teachers, and parents.",
+      impact: "3-tier communication loop connecting students, faculty, and parents.",
       results: [
-        "Three role dashboards",
-        "Centralized updates and feedback",
-        "Vanilla JS foundation",
+        "Three dedicated role-based dashboards",
+        "Centralized academic updates and feedback loop",
+        "Solid vanilla web foundation",
       ],
-      highlights: ["3-tier portal", "Unified messaging", "Vanilla stack"],
+      highlights: [
+        "3-Tier Architecture",
+        "Role-Based Dashboards",
+        "Vanilla Stack",
+      ],
       features: [
         {
-          title: "Role-based Dashboards",
-          description:
-            "Dedicated experiences for students, teachers, and parents.",
+          title: "Role-Based Dashboards",
+          description: "Tailored portals for students, teachers, and parents.",
         },
         {
           title: "Communication Loop",
           description:
-            "Centralized updates, announcements, and academic feedback.",
+            "Centralized announcement and academic feedback channels.",
         },
       ],
       stack: ["Vanilla HTML5", "CSS3", "JavaScript"],
       category: "education",
       status: "Shipped",
-      links: [{ label: "Source", url: "#", type: "github" }],
-      accentColor: "#e9f6c6",
-      gradient: ["#e9f6c6", "#1b2014"],
-      videoUrl: "/videos/clg360.mp4",
+      links: [{ label: "Source Code", url: "#", type: "github" }],
+      featured: false,
+      accentColor: "#c34e52",
+      gradient: ["#c34e52", "#2a1112"],
       year: 2022,
-    },
-    {
-      id: "portfolio-3d",
-      title: "Interactive 3D Portfolio",
-      subtitle: "Premium Developer Showroom",
-      description:
-        "A premium, custom-designed, highly animated developer showroom.",
-      longDescription:
-        "A cinematic 3D portfolio built with scroll-driven camera choreography, performance-first shaders, and immersive UI overlays.",
-      role: "Creative Dev + 3D",
-      timeline: "2024",
-      impact: "Cinematic 3D portfolio with scroll-synced camera movement.",
-      results: [
-        "Scroll-driven camera choreography",
-        "Immersive UI overlays",
-        "Performance-first shaders",
-      ],
-      highlights: ["R3F world", "GSAP motion", "Cinematic UI"],
-      features: [
-        {
-          title: "Scroll Camera",
-          description:
-            "Camera paths and rotations synchronized to scroll sections.",
-        },
-        {
-          title: "Atmospheric Scene",
-          description:
-            "Abstract geometry, starfields, and glowing coordinate grids.",
-        },
-        {
-          title: "Performance Focus",
-          description:
-            "Optimized materials and instanced geometry for 60 FPS.",
-        },
-      ],
-      stack: [
-        "React",
-        "Three.js",
-        "React Three Fiber",
-        "GSAP",
-        "Tailwind CSS",
-        "TypeScript",
-      ],
-      category: "portfolio",
-      status: "Live",
-      links: [{ label: "Repository", url: "#", type: "github" }],
-      accentColor: "#5f8242",
-      gradient: ["#5f8242", "#0f140a"],
-      videoUrl: "/videos/portfolio.mp4",
-      year: 2024,
     },
   ],
   experience: [
     {
-      id: "exp-1",
-      role: "System Designer and Full Stack Lead",
-      organization: "Independent Projects",
-      period: "2022 - Present",
+      id: "exp-kaevron",
+      role: "Full Stack Developer Intern",
+      organization: "Kaevron Technologies",
+      period: "2026 - Present",
       summary:
-        "Leading end-to-end builds that combine advanced systems with immersive UI.",
+        "INDUSTRY EXECUTION // ACTIVE APPOINTMENT — Leading high-stakes production features and automated AI processing pipelines.",
       highlights: [
-        "Architected AI-driven health platforms and local-first assistants.",
-        "Built real-time health timelines with encrypted data sync.",
-        "Delivered immersive 3D web experiences with performance focus.",
+        "Production Version Control: Authored and merged multiple high-stakes Pull Requests directly into live company repositories with 100% approval rate.",
+        "Client Interactivity: Successfully pivoted mid-lifecycle from modern experimental UI concepts to structured, template-driven designs based on strict client feedback cycles (ClickPoint / MHCIT Academy).",
+        "Automated Workflows: Engineered and deployed automated AI-driven auditing and lead-generation processing pipelines to production.",
       ],
       type: "work",
     },
