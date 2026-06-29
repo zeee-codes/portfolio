@@ -75,8 +75,9 @@ const App = () => {
     if (reduceMotion) return;
 
     const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      duration: 0.8,
+      wheelMultiplier: 1.15,
+      touchMultiplier: 1.5,
       smoothWheel: true,
     });
 

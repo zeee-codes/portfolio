@@ -7,7 +7,6 @@ type HeroProps = {
   contact: ContactInfo;
 };
 
-
 const Hero = ({ profile, contact }: HeroProps) => {
   const primarySocials = contact.socials.filter((social) =>
     ["github", "linkedin"].includes(social.platform)
@@ -24,7 +23,8 @@ const Hero = ({ profile, contact }: HeroProps) => {
         <div className="hero-chip">{contact.availability}</div>
         <div className="hero-chip">{contact.location}</div>
       </div>
-      <div className="hero-layout">
+
+      <div className="hero-main-container">
         <div className="hero-left">
           <p className="section-kicker">Zaid Sayyed</p>
           <h1 className="hero-title">
@@ -37,6 +37,7 @@ const Hero = ({ profile, contact }: HeroProps) => {
           </h1>
           <p className="hero-subtitle">{profile.tagline}</p>
           <p className="hero-summary text-dim">{profile.summary}</p>
+
           <div className="cta-row">
             <MagneticButton href="#projects" className="btn-primary" cursor="magnet">
               View Projects
@@ -60,6 +61,7 @@ const Hero = ({ profile, contact }: HeroProps) => {
               </MagneticButton>
             ) : null}
           </div>
+
           <div className="hero-socials">
             {primarySocials.map((social) => (
               <a
@@ -77,24 +79,29 @@ const Hero = ({ profile, contact }: HeroProps) => {
             ))}
           </div>
         </div>
-        <div className="hero-panel surface-panel">
-          <div className="hero-panel-head">
-            <span className="hero-panel-title">Focus Areas</span>
-            <span className="hero-panel-kicker">{contact.title}</span>
-          </div>
-          <ul className="hero-panel-list">
-            {profile.focusAreas.map((area) => (
-              <li key={area}>{area}</li>
-            ))}
-          </ul>
-          {profile.quickFacts?.length ? (
-            <div className="hero-facts">
-              {profile.quickFacts.map((fact) => (
-                <div key={fact.label} className="hero-fact">
-                  <span className="hero-fact-label">{fact.label}</span>
-                  <span className="hero-fact-value">{fact.value}</span>
-                </div>
+
+        {/* Separated Overview Strip below headline narrative */}
+        <div className="hero-overview-strip surface-panel">
+          <div className="overview-block">
+            <span className="overview-title">Focus Areas</span>
+            <ul className="overview-list">
+              {profile.focusAreas.map((area) => (
+                <li key={area}>{area}</li>
               ))}
+            </ul>
+          </div>
+
+          {profile.quickFacts?.length ? (
+            <div className="overview-block">
+              <span className="overview-title">Quick Facts</span>
+              <div className="hero-facts">
+                {profile.quickFacts.map((fact) => (
+                  <div key={fact.label} className="hero-fact">
+                    <span className="hero-fact-label">{fact.label}</span>
+                    <span className="hero-fact-value">{fact.value}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           ) : null}
         </div>
