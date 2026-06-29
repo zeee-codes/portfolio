@@ -1,5 +1,17 @@
 import { useState, useEffect } from "react";
-import { FiMenu, FiX, FiExternalLink } from "react-icons/fi";
+import {
+  FiHome,
+  FiZap,
+  FiUser,
+  FiCpu,
+  FiGrid,
+  FiBriefcase,
+  FiMail,
+  FiExternalLink,
+  FiMenu,
+  FiX,
+  FiSend,
+} from "react-icons/fi";
 import type { NavSection } from "../../types/portfolio";
 
 type NavbarProps = {
@@ -7,15 +19,60 @@ type NavbarProps = {
   resumeUrl?: string;
 };
 
+const getSectionIcon = (id: string) => {
+  switch (id) {
+    case "hero":
+    case "home":
+      return <FiHome size={14} className="nav-item-icon" />;
+    case "why-hire":
+      return <FiZap size={14} className="nav-item-icon" />;
+    case "about":
+    case "identity":
+      return <FiUser size={14} className="nav-item-icon" />;
+    case "skills":
+    case "stack":
+      return <FiCpu size={14} className="nav-item-icon" />;
+    case "projects":
+    case "works":
+      return <FiGrid size={14} className="nav-item-icon" />;
+    case "experience":
+      return <FiBriefcase size={14} className="nav-item-icon" />;
+    case "contact":
+    case "link":
+      return <FiMail size={14} className="nav-item-icon" />;
+    default:
+      return null;
+  }
+};
+
 const Navbar = ({ sections, resumeUrl }: NavbarProps) => {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState<string>("hero");
   const resumeTarget = resumeUrl?.startsWith("http") ? "_blank" : undefined;
   const resumeRel = resumeTarget ? "noreferrer" : undefined;
+
+  // Track active section on scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPos = window.scrollY + 250;
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const el = document.getElementById(sections[i].id);
+        if (el && el.offsetTop <= scrollPos) {
+          setActiveSection(sections[i].id);
+          break;
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [sections]);
 
   // Close mobile menu on resize to desktop
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth >= 768) {
+      if (window.innerWidth >= 992) {
         setMobileOpen(false);
       }
     };
@@ -37,94 +94,110 @@ const Navbar = ({ sections, resumeUrl }: NavbarProps) => {
   };
 
   return (
-    <nav className="nav-shell">
-      <div className="nav-inner surface-panel nav-surface">
-        <a href="#hero" className="nav-brand" onClick={handleNavClick}>
-          ZAID SAYYED
+    <nav className="dynamic-island-shell">
+      <div className="dynamic-island-capsule">
+        {/* Brand Monogram Badge */}
+        <a href="#hero" className="island-brand" onClick={handleNavClick}>
+          <span className="brand-avatar">ZS</span>
+          <span className="brand-text desktop-only">ZAID SAYYED</span>
+          <span className="status-pulse-dot" title="Available for Hire" />
         </a>
 
-        {/* Desktop Links */}
-        <div className="nav-links desktop-only">
-          {sections.map((section) => (
-            <a
-              key={section.id}
-              href={`#${section.id}`}
-              className="nav-link"
-              data-cursor="link"
-            >
-              {section.label}
-            </a>
-          ))}
+        {/* Desktop Central Links Dock */}
+        <div className="island-links desktop-only">
+          {sections.map((section) => {
+            const isActive = activeSection === section.id;
+            return (
+              <a
+                key={section.id}
+                href={`#${section.id}`}
+                className={`island-link ${isActive ? "is-active" : ""}`}
+                data-cursor="link"
+              >
+                {getSectionIcon(section.id)}
+                <span className="island-link-label">{section.label}</span>
+                {isActive && <span className="active-glow-pill" />}
+              </a>
+            );
+          })}
         </div>
 
-        {/* Desktop Actions */}
-        <div className="nav-actions desktop-only">
+        {/* Desktop Right Actions */}
+        <div className="island-actions desktop-only">
           {resumeUrl ? (
             <a
               href={resumeUrl}
-              className="nav-cta nav-resume"
+              className="island-cta-btn island-resume-btn"
               data-cursor="link"
               target={resumeTarget}
               rel={resumeRel}
             >
-              Resume <FiExternalLink className="inline-icon" />
+              <span>Resume</span> <FiExternalLink size={12} />
             </a>
           ) : null}
-          <a href="#contact" className="nav-cta" data-cursor="magnet">
-            Contact
+          <a href="#contact" className="island-cta-btn island-primary-btn" data-cursor="magnet">
+            <span>Hire Me</span> <FiSend size={12} />
           </a>
         </div>
 
-        {/* Mobile Toggle Button */}
+        {/* Mobile Dynamic Toggle */}
         <button
           type="button"
-          className="mobile-toggle-btn mobile-only"
+          className="island-mobile-toggle mobile-only"
           onClick={() => setMobileOpen((prev) => !prev)}
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
           aria-expanded={mobileOpen}
         >
-          {mobileOpen ? <FiX size={22} /> : <FiMenu size={22} />}
-          <span className="mobile-toggle-text">{mobileOpen ? "CLOSE" : "MENU"}</span>
+          {mobileOpen ? <FiX size={18} /> : <FiMenu size={18} />}
+          <span className="mobile-toggle-lbl">{mobileOpen ? "CLOSE" : "MENU"}</span>
         </button>
       </div>
 
-      {/* Mobile Navigation Overlay */}
+      {/* Mobile Dynamic Island Expanded Overlay */}
       {mobileOpen && (
-        <div className="mobile-menu-overlay surface-panel">
-          <div className="mobile-menu-content">
-            <p className="mobile-menu-kicker">NAVIGATION</p>
-            <div className="mobile-nav-links">
-              {sections.map((section) => (
+        <div className="island-mobile-menu surface-panel">
+          <div className="island-mobile-head">
+            <span className="mobile-head-title">SYSTEM NAVIGATION</span>
+            <span className="mobile-head-status">ONLINE</span>
+          </div>
+          <div className="island-mobile-links">
+            {sections.map((section) => {
+              const isActive = activeSection === section.id;
+              return (
                 <a
                   key={section.id}
                   href={`#${section.id}`}
-                  className="mobile-nav-link"
+                  className={`island-mobile-link ${isActive ? "is-active" : ""}`}
                   onClick={handleNavClick}
                 >
-                  {section.label}
+                  <div className="mobile-link-left">
+                    {getSectionIcon(section.id)}
+                    <span>{section.label}</span>
+                  </div>
+                  {isActive && <span className="mobile-active-tag">ACTIVE</span>}
                 </a>
-              ))}
-            </div>
-            <div className="mobile-nav-actions">
-              {resumeUrl ? (
-                <a
-                  href={resumeUrl}
-                  className="btn-secondary mobile-cta-btn"
-                  target={resumeTarget}
-                  rel={resumeRel}
-                  onClick={handleNavClick}
-                >
-                  Resume <FiExternalLink className="inline-icon" />
-                </a>
-              ) : null}
+              );
+            })}
+          </div>
+          <div className="island-mobile-actions">
+            {resumeUrl ? (
               <a
-                href="#contact"
-                className="btn-primary mobile-cta-btn"
+                href={resumeUrl}
+                className="island-cta-btn island-resume-btn mobile-act"
+                target={resumeTarget}
+                rel={resumeRel}
                 onClick={handleNavClick}
               >
-                Let&apos;s Talk
+                <span>Resume</span> <FiExternalLink size={14} />
               </a>
-            </div>
+            ) : null}
+            <a
+              href="#contact"
+              className="island-cta-btn island-primary-btn mobile-act"
+              onClick={handleNavClick}
+            >
+              <span>Hire Me</span> <FiSend size={14} />
+            </a>
           </div>
         </div>
       )}
@@ -133,4 +206,3 @@ const Navbar = ({ sections, resumeUrl }: NavbarProps) => {
 };
 
 export default Navbar;
-
