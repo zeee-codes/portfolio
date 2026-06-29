@@ -1,0 +1,21 @@
+# Zaid Sayyed
+
+> Zaid Sayyed is a Full Stack Developer, Systems Architect, and 3D WebGL Engineer based in Mumbai, India. He currently works as a Full Stack Developer Intern at Kaevron Technologies, specializing in scalable web systems, local LLM architectures, and cinematic 3D web graphics.
+
+## Expertise & Technical Stack
+- [Frontend Engineering](https://beomnifit.website/#stack): Expert in React, TypeScript, Three.js, React Three Fiber, GSAP, and Tailwind CSS.
+- [Systems & Backend](https://beomnifit.website/#stack): Advanced architectures built with Node.js, Express, PostgreSQL, Firebase, Java, C++, and Python.
+- [AI & Computer Vision Engineering](https://beomnifit.website/#stack): Real-time computer vision models, TensorFlow.js integrations, local Ollama LLM agents, and Gemini API pipelines.
+
+## Featured Projects
+- [OmniFit](https://beomnifit.website/#works): AI health ecosystem featuring a custom computer vision Indian food scanner with 98% accuracy and real-time exercise form correction.
+- [Syncell](https://beomnifit.website/#works): Encrypted real-time Personal Medical Timeline OS eliminating medical paperwork across doctors, labs, and patients.
+- [Gen_AI Resume Processor](https://beomnifit.website/#works): Brutalist-designed AI resume building platform leveraging Gemini API pipelines for automated career parsing.
+- [CUDA AI Assistant](https://beomnifit.website/#works): Local-first, privacy-focused desktop automation agent built with Ollama, LangChain, and Electron.
+- [3D Interactive Hub](https://beomnifit.website): Scroll-driven WebGL portfolio integrating Three.js, React Three Fiber, GSAP ScrollTrigger, and Lenis smooth scrolling.
+
+## Official Links
+- [Official Portfolio](https://beomnifit.website): Primary canonical hub and interactive 3D showcase.
+- [GitHub Profile](https://github.com/zeee-codes): Open-source repositories, system architecture diagrams, and code artifacts.
+- [LinkedIn Profile](https://linkedin.com/in/zaid-sayyed-1903az): Professional background, experience history, and corporate network.
+- [Email Contact](mailto:zaidsayyed3108@gmail.com): Direct contact for engineering inquiries and system design collaborations.

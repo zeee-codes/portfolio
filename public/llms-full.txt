@@ -1,0 +1,35 @@
+# Zaid Sayyed — Comprehensive Entity & Technical Profile
+
+> Zaid Sayyed is a Full Stack Developer, Systems Architect, and 3D WebGL Engineer based in Mumbai, India. He specializes in bridging high-performance backend systems with immersive 3D frontend interfaces and AI product engineering.
+
+## Current Role & Experience
+Zaid Sayyed works as a Full Stack Developer Intern at Kaevron Technologies in Mumbai, India. In this role, he designs high-performance web applications, implements computer vision models, and architects AI-driven production workflows.
+
+## Detailed Core Projects
+
+### 1. OmniFit (AI Health Ecosystem)
+- **Role**: Product Engineer & Full Stack Architect
+- **Technology Stack**: React, TensorFlow.js, Node.js, PostgreSQL, Tailwind CSS
+- **Key Achievements**: Architected an AI-powered fitness ecosystem featuring an Indian food scanner achieving 98% recognition accuracy trained on over 10,000 regional food samples. Built real-time computer vision posture detection for 20+ physical exercises.
+
+### 2. Syncell (Universal Medical Timeline OS)
+- **Role**: Systems Architect & Frontend Engineer
+- **Technology Stack**: Next.js, Firebase, WebSockets, AES-256 Encryption
+- **Key Achievements**: Engineered a zero-paperwork, encrypted medical timeline synchronizing patient records simultaneously across doctors, diagnostic laboratories, and hospital portals with role-based access control.
+
+### 3. Gen_AI Resume Processor
+- **Role**: AI Engineer & UI Designer
+- **Technology Stack**: React, TypeScript, Google Gemini API, Brutalist Design System
+- **Key Achievements**: Created an automated resume generation and analysis engine utilizing Gemini LLM pipelines to parse career histories and tailor CV layouts in real-time.
+
+### 4. CUDA (Privacy-First Local AI Assistant)
+- **Role**: AI Automation Engineer
+- **Technology Stack**: Python, Ollama, LangChain, Electron, Cross-Platform Desktop Automation
+- **Key Achievements**: Built a 100% local desktop automation agent capable of file traversal, system actions, and contextual querying without transferring data to external servers.
+
+## Verification & Social Graph
+Zaid Sayyed's digital presence is officially anchored and verified across the following authoritative endpoints:
+- Primary Website: https://beomnifit.website
+- GitHub: https://github.com/zeee-codes
+- LinkedIn: https://linkedin.com/in/zaid-sayyed-1903az
+- Email: zaidsayyed3108@gmail.com
