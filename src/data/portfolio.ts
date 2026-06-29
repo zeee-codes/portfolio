@@ -131,8 +131,8 @@ export const portfolioData: PortfolioData = {
   ],
   projects: [
     {
-      id: "kokonam",
-      title: "KOKONAM",
+      id: "kokanam",
+      title: "KOKANAM",
       subtitle: "Enterprise E-Commerce Ecosystem",
       description:
         "Full-scale enterprise e-commerce platform with custom UI, role authentication, and live logistics integration.",
@@ -176,7 +176,7 @@ export const portfolioData: PortfolioData = {
       ],
       category: "ecommerce",
       status: "Live",
-      links: [{ label: "Live Site", url: "https://kokonam.in", type: "live" }],
+      links: [{ label: "Live Site", url: "https://kokanam.in", type: "live" }],
       featured: true,
       accentColor: "#5f8242",
       gradient: ["#5f8242", "#1a2414"],
