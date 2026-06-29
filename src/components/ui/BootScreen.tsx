@@ -6,11 +6,9 @@ type BootScreenProps = {
 };
 
 const bootStages = [
-  "Powering core",
-  "Loading render modules",
-  "Calibrating motion grid",
-  "Syncing visual systems",
-  "Launching interface",
+  "Loading portfolio assets",
+  "Initializing 3D environment",
+  "Preparing interactive experience",
 ];
 
 const BootScreen = ({ onComplete, onDisable }: BootScreenProps) => {
@@ -20,7 +18,7 @@ const BootScreen = ({ onComplete, onDisable }: BootScreenProps) => {
   useEffect(() => {
     let value = 0;
     const interval = window.setInterval(() => {
-      value = Math.min(100, value + Math.random() * 10 + 6);
+      value = Math.min(100, value + Math.random() * 12 + 8);
       setProgress(value);
       const nextStage = Math.min(
         bootStages.length - 1,
@@ -30,9 +28,9 @@ const BootScreen = ({ onComplete, onDisable }: BootScreenProps) => {
 
       if (value >= 100) {
         window.clearInterval(interval);
-        window.setTimeout(onComplete, 500);
+        window.setTimeout(onComplete, 300);
       }
-    }, 140);
+    }, 100);
 
     return () => window.clearInterval(interval);
   }, [onComplete]);
@@ -41,16 +39,16 @@ const BootScreen = ({ onComplete, onDisable }: BootScreenProps) => {
     <div className="boot-screen" role="status" aria-live="polite">
       <div className="boot-panel">
         <div className="boot-head">
-          <span className="boot-kicker">SYSTEM BOOT</span>
-          <span className="boot-code">ZX-17</span>
+          <span className="boot-kicker">ZAID SAYYED</span>
+          <span className="boot-code">PORTFOLIO</span>
         </div>
-        <h1 className="boot-title">Initializing signal stack</h1>
+        <h1 className="boot-title">Welcome</h1>
         <p className="boot-subtitle text-dim">{bootStages[stageIndex]}</p>
         <div className="boot-progress">
           <span style={{ width: `${Math.round(progress)}%` }} />
         </div>
         <div className="boot-meta">
-          <span>Progress</span>
+          <span>Loading</span>
           <span>{Math.round(progress)}%</span>
         </div>
         <div className="boot-actions">
@@ -60,7 +58,7 @@ const BootScreen = ({ onComplete, onDisable }: BootScreenProps) => {
             onClick={onComplete}
             data-cursor="link"
           >
-            Skip
+            Enter Now
           </button>
           <button
             type="button"
@@ -68,19 +66,8 @@ const BootScreen = ({ onComplete, onDisable }: BootScreenProps) => {
             onClick={onDisable}
             data-cursor="magnet"
           >
-            Don&apos;t show again
+            Skip loading screen in future
           </button>
-        </div>
-        <div className="boot-lines">
-          {bootStages.map((stage, index) => (
-            <div
-              key={stage}
-              className={`boot-line ${index <= stageIndex ? "is-active" : ""}`}
-            >
-              <span className="boot-dot" />
-              {stage}
-            </div>
-          ))}
         </div>
       </div>
     </div>

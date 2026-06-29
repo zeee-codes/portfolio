@@ -100,7 +100,6 @@ const Navbar = ({ sections, resumeUrl }: NavbarProps) => {
         <a href="#hero" className="island-brand" onClick={handleNavClick}>
           <span className="brand-avatar">ZS</span>
           <span className="brand-text desktop-only">ZAID SAYYED</span>
-          <span className="status-pulse-dot" title="Available for Hire" />
         </a>
 
         {/* Desktop Central Links Dock */}
@@ -157,8 +156,7 @@ const Navbar = ({ sections, resumeUrl }: NavbarProps) => {
       {mobileOpen && (
         <div className="island-mobile-menu surface-panel">
           <div className="island-mobile-head">
-            <span className="mobile-head-title">SYSTEM NAVIGATION</span>
-            <span className="mobile-head-status">ONLINE</span>
+            <span className="mobile-head-title">NAVIGATION</span>
           </div>
           <div className="island-mobile-links">
             {sections.map((section) => {

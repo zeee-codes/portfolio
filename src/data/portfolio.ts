@@ -634,7 +634,7 @@ export const portfolioData: PortfolioData = {
       organization: "Kaevron Technologies",
       period: "2026 - Present",
       summary:
-        "INDUSTRY EXECUTION // ACTIVE APPOINTMENT — Leading high-stakes production features and automated AI processing pipelines.",
+        "Leading production feature development, automated AI processing pipelines, and client-facing web applications.",
       highlights: [
         "Production Version Control: Authored and merged multiple high-stakes Pull Requests directly into live company repositories with 100% approval rate.",
         "Client Interactivity: Successfully pivoted mid-lifecycle from modern experimental UI concepts to structured, template-driven designs based on strict client feedback cycles (ClickPoint / MHCIT Academy).",

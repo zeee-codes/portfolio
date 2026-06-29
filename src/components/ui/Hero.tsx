@@ -21,10 +21,7 @@ const Hero = ({ profile, contact }: HeroProps) => {
   return (
     <section id="hero" className="section hero">
       <div className="hero-topline">
-        <div className="hero-chip">
-          <span className="hero-dot" aria-hidden="true" />
-          <span>Live · {contact.availability}</span>
-        </div>
+        <div className="hero-chip">{contact.availability}</div>
         <div className="hero-chip">{contact.location}</div>
       </div>
       <div className="hero-layout">
