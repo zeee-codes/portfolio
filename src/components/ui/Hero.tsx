@@ -1,3 +1,4 @@
+import { FiGithub, FiLinkedin, FiExternalLink } from "react-icons/fi";
 import MagneticButton from "../common/MagneticButton";
 import type { ContactInfo, Profile } from "../../types/portfolio";
 
@@ -5,6 +6,7 @@ type HeroProps = {
   profile: Profile;
   contact: ContactInfo;
 };
+
 
 const Hero = ({ profile, contact }: HeroProps) => {
   const primarySocials = contact.socials.filter((social) =>
@@ -71,7 +73,9 @@ const Hero = ({ profile, contact }: HeroProps) => {
                 rel="noreferrer"
                 data-cursor="link"
               >
-                {social.label}
+                {social.platform === "github" ? <FiGithub size={16} /> : <FiLinkedin size={16} />}
+                <span>{social.label}</span>
+                <FiExternalLink size={12} className="ext-arrow" />
               </a>
             ))}
           </div>

@@ -1,9 +1,26 @@
+import { FiGithub, FiLinkedin, FiMail, FiPhone, FiExternalLink } from "react-icons/fi";
 import type { ContactInfo } from "../../types/portfolio";
 
 type ContactProps = {
   contact: ContactInfo;
   resumeUrl?: string;
 };
+
+const getSocialIcon = (platform: string) => {
+  switch (platform.toLowerCase()) {
+    case "github":
+      return <FiGithub size={16} />;
+    case "linkedin":
+      return <FiLinkedin size={16} />;
+    case "email":
+      return <FiMail size={16} />;
+    case "phone":
+      return <FiPhone size={16} />;
+    default:
+      return <FiExternalLink size={16} />;
+  }
+};
+
 
 const Contact = ({ contact, resumeUrl }: ContactProps) => {
   const phoneLink = contact.phone.replace(/\s/g, "");
@@ -68,18 +85,23 @@ const Contact = ({ contact, resumeUrl }: ContactProps) => {
             ) : null}
           </div>
           <div className="contact-socials">
-            {contact.socials.map((social) => (
-              <a
-                key={social.platform}
-                href={social.url}
-                className="social-link"
-                target={social.url.startsWith("http") ? "_blank" : undefined}
-                rel={social.url.startsWith("http") ? "noreferrer" : undefined}
-                data-cursor="link"
-              >
-                {social.label}
-              </a>
-            ))}
+            {contact.socials.map((social) => {
+              const isExt = social.url.startsWith("http");
+              return (
+                <a
+                  key={social.platform}
+                  href={social.url}
+                  className="social-link"
+                  target={isExt ? "_blank" : undefined}
+                  rel={isExt ? "noreferrer" : undefined}
+                  data-cursor="link"
+                >
+                  {getSocialIcon(social.platform)}
+                  <span>{social.label}</span>
+                  {isExt && <FiExternalLink size={12} className="ext-arrow" />}
+                </a>
+              );
+            })}
           </div>
         </div>
         <form

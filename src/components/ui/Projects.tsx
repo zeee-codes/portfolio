@@ -1,11 +1,27 @@
 import { useMemo, useState } from "react";
 import type { CSSProperties } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { FiExternalLink, FiGithub, FiFileText, FiPlayCircle, FiGlobe, FiMaximize2 } from "react-icons/fi";
 import type { Project } from "../../types/portfolio";
 
 type ProjectsProps = {
   projects: Project[];
 };
+
+const getLinkIcon = (type?: string, label?: string) => {
+  const lowerLabel = label?.toLowerCase() || "";
+  if (type === "live" || lowerLabel.includes("live") || lowerLabel.includes("site") || lowerLabel.includes("platform")) {
+    return <FiGlobe className="link-icon" />;
+  }
+  if (type === "github" || lowerLabel.includes("github") || lowerLabel.includes("repo") || lowerLabel.includes("source")) {
+    return <FiGithub className="link-icon" />;
+  }
+  if (type === "video" || lowerLabel.includes("video") || lowerLabel.includes("demo")) {
+    return <FiPlayCircle className="link-icon" />;
+  }
+  return <FiFileText className="link-icon" />;
+};
+
 
 const Projects = ({ projects }: ProjectsProps) => {
   const [activeProject, setActiveProject] = useState<Project | null>(null);
@@ -124,25 +140,30 @@ const Projects = ({ projects }: ProjectsProps) => {
                 </div>
                 <div className="project-links">
                   <button
-                    className="project-detail"
+                    className="project-detail-btn"
                     type="button"
                     onClick={() => setActiveProject(project)}
                     data-cursor="view"
                   >
-                    View Detail
+                    <FiMaximize2 size={15} /> View Case Study
                   </button>
-                  {project.links.map((link) => (
-                    <a
-                      key={link.label}
-                      href={link.url}
-                      className="project-link"
-                      target={link.url.startsWith("http") ? "_blank" : undefined}
-                      rel={link.url.startsWith("http") ? "noreferrer" : undefined}
-                      data-cursor="link"
-                    >
-                      {link.label}
-                    </a>
-                  ))}
+                  {project.links.map((link) => {
+                    const isExternal = link.url && link.url !== "#" && link.url.startsWith("http");
+                    return (
+                      <a
+                        key={link.label}
+                        href={link.url}
+                        className={`project-link-btn ${link.type === "live" ? "is-primary-link" : ""}`}
+                        target={isExternal ? "_blank" : undefined}
+                        rel={isExternal ? "noreferrer" : undefined}
+                        data-cursor="link"
+                      >
+                        {getLinkIcon(link.type, link.label)}
+                        <span>{link.label}</span>
+                        {isExternal && <FiExternalLink size={13} className="ext-arrow" />}
+                      </a>
+                    );
+                  })}
                 </div>
               </motion.div>
             </div>
@@ -230,18 +251,23 @@ const Projects = ({ projects }: ProjectsProps) => {
                 ))}
               </div>
               <div className="project-links">
-                {activeProject.links.map((link) => (
-                  <a
-                    key={link.label}
-                    href={link.url}
-                    className="project-link"
-                    target={link.url.startsWith("http") ? "_blank" : undefined}
-                    rel={link.url.startsWith("http") ? "noreferrer" : undefined}
-                    data-cursor="link"
-                  >
-                    {link.label}
-                  </a>
-                ))}
+                {activeProject.links.map((link) => {
+                  const isExternal = link.url && link.url !== "#" && link.url.startsWith("http");
+                  return (
+                    <a
+                      key={link.label}
+                      href={link.url}
+                      className={`project-link-btn ${link.type === "live" ? "is-primary-link" : ""}`}
+                      target={isExternal ? "_blank" : undefined}
+                      rel={isExternal ? "noreferrer" : undefined}
+                      data-cursor="link"
+                    >
+                      {getLinkIcon(link.type, link.label)}
+                      <span>{link.label}</span>
+                      {isExternal && <FiExternalLink size={13} className="ext-arrow" />}
+                    </a>
+                  );
+                })}
               </div>
             </motion.div>
           </motion.div>

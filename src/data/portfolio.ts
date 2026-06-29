@@ -218,7 +218,7 @@ export const portfolioData: PortfolioData = {
       stack: ["Next.js", "Supabase", "Relational DB Schema"],
       category: "systems",
       status: "In Development",
-      links: [{ label: "System Brief", url: "#", type: "docs" }],
+      links: [{ label: "System Brief", url: "", type: "docs" }],
       featured: true,
       accentColor: "#c34e52",
       gradient: ["#c34e52", "#2a1112"],
